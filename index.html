@@ -18,8 +18,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.min.js"></script>
 <script>
-twikoo({
-  envId: "https://vercel-blog-two-alpha.vercel.app"
+twikoo.init({
+  el: "#twikoo",
+  serverURL: "https://vercel-blog-two-alpha.vercel.app",
+  path: "index",
+  useAbsolutePath: true
 });
 </script>
 </body>
