@@ -29,15 +29,14 @@
         <h1>欢迎留言</h1>
         <div id="twikoo"></div>
 
-        <!-- 就改了这一行！其他全没变 -->
         <script src="https://unpkg.com/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
         <script>
             twikoo.init({
                 el: "#twikoo",
-                serverURL: "https://vercel-blog-two-alpha.vercel.app",
+                // 👇 只改了这一行！替换成有效后端地址
+                serverURL: "https://twikoo-tau.vercel.app",
                 path: window.location.pathname
             });
         </script>
     </div>
-</body>
 </html>
