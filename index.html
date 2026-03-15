@@ -5,42 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>留言板</title>
     <style>
-        body {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
+        body { max-width: 900px; margin: 50px auto; padding: 20px; background: #f5f5f5; }
+        .box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px #00000012; }
+        h1 { text-align: center; color: #333; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="box">
         <h1>欢迎留言</h1>
-        <!-- Twikoo 评论区 -->
         <div id="twikoo"></div>
-
-        <!-- 官方正确CDN链接（修复了之前的错误！） -->
-        <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
-        <script>
-            twikoo.init({
-                el: "#twikoo",
-                // 你的Twikoo后端地址（已填好）
-                serverURL: "https://vercel-blog-two-alpha.vercel.app",
-                // 必选配置：页面标识
-                path: window.location.pathname
-            });
-        </script>
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.min.js"></script>
+<script>
+twikoo({
+  envId: "https://vercel-blog-two-alpha.vercel.app"
+});
+</script>
 </body>
 </html>
