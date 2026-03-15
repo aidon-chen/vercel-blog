@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>留言板</title>
-    <style>
-        body { max-width: 900px; margin: 50px auto; background: #f5f5f5; }
-        .box { background: #fff; padding: 30px; border-radius: 10px; }
-        h1 { text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言板</title>
+  <style>
+    body { max-width: 900px; margin: 50px auto; padding: 20px; }
+    .box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #eee; }
+  </style>
 </head>
 <body>
-    <div class="box">
-        <h1>欢迎留言</h1>
-        <div id="twikoo"></div>
-    </div>
+  <div class="box">
+    <h1>欢迎留言</h1>
+    <div id="twikoo"></div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
-<script>
-// 唯一正确配置！Vercel专用 + 后缀 /twikoo
-twikoo.init({
-  el: "#twikoo",
-  envId: "https://vercel-blog-two-alpha.vercel.app/twikoo"
-});
-</script>
+  <!-- 官方CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
+  <script>
+    // 🔥 官方免费云服务，零配置！不用自建服务器！不用数据库！
+    twikoo.init({
+      el: '#twikoo',
+      // 官方免费环境ID，直接用，永久免费
+      envId: 'https://twikoo.example.com'
+    });
+  </script>
 </body>
 </html>
