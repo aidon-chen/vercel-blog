@@ -2,22 +2,11 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>留言板</title>
     <style>
-        body { max-width: 900px; margin: 50px auto; padding: 20px; background: #f5f5f5; }
-        .box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px #00000012; }
-        h1 { text-align: center; color: #333; }
-    </style><!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>留言板</title>
-    <style>
-        body { max-width: 900px; margin: 50px auto; padding: 20px; background: #f5f5f5; }
-        .box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #333; }
+        body { max-width: 900px; margin: 50px auto; background: #f5f5f5; }
+        .box { background: #fff; padding: 30px; border-radius: 10px; }
+        h1 { text-align: center; }
     </style>
 </head>
 <body>
@@ -26,32 +15,12 @@
         <div id="twikoo"></div>
     </div>
 
-<!-- 官方CDN -->
 <script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
 <script>
-// Vercel 部署专用配置（唯一正确写法！）
+// 唯一正确配置！Vercel专用 + 后缀 /twikoo
 twikoo.init({
   el: "#twikoo",
-  // 重点！Vercel版必须用 envId，直接填你的后端地址
-  envId: "https://vercel-blog-two-alpha.vercel.app"
-});
-</script>
-</body>
-</html>
-</head>
-<body>
-    <div class="box">
-        <h1>欢迎留言</h1>
-        <div id="twikoo"></div>
-    </div>
-
-<script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.min.js"></script>
-<script>
-twikoo.init({
-  el: "#twikoo",
-  serverURL: "https://vercel-blog-two-alpha.vercel.app",
-  path: "index",
-  useAbsolutePath: true
+  envId: "https://vercel-blog-two-alpha.vercel.app/twikoo"
 });
 </script>
 </body>
