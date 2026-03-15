@@ -3,54 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的留言板</title>
+    <title>留言板</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", Arial, sans-serif;
-        }
         body {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 50px auto;
             padding: 20px;
-            background: #f8f9fa;
+            background: #f5f5f5;
         }
         .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            margin-top: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .title {
+        h1 {
             text-align: center;
+            color: #333;
             margin-bottom: 30px;
-            color: #2c3e50;
-        }
-        .desc {
-            text-align: center;
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">欢迎留言</h1>
-        <p class="desc">无需登录，直接评论交流 🎉</p>
-
-        <!-- Twikoo 评论区（已配置你的地址） -->
+        <h1>欢迎留言</h1>
+        <!-- Twikoo 评论区 -->
         <div id="twikoo"></div>
-        <script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script>
+
+        <!-- 官方正确CDN链接（修复了之前的错误！） -->
+        <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
         <script>
-        twikoo.init({
-            el: "#twikoo",
-            // 已填入你的专属后端地址
-            serverURL: "https://vercel-blog-two-alpha.vercel.app"
-        });
+            twikoo.init({
+                el: "#twikoo",
+                // 你的Twikoo后端地址（已填好）
+                serverURL: "https://vercel-blog-two-alpha.vercel.app",
+                // 必选配置：页面标识
+                path: window.location.pathname
+            });
         </script>
     </div>
 </body>
