@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>留言板</title>
-  <style>
-    body {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      font-family: system-ui;
-    }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的留言板</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>欢迎留言</h1>
-    <div id="twikoo"></div>
-  </div>
-
-  <!-- Twikoo 官方CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
-  <script>
-    // 🔥 官方免费云服务（无服务器、无数据库、无跨域、无报错）
-    twikoo.init({
-      el: "#twikoo",
-      // 官方免费正式环境ID，直接用！
-      envId: "https://twikoo-api.vercel.app"
-    });
-  </script>
+    <div class="container">
+        <h1>欢迎留言 💬</h1>
+        <!-- Giscus 评论区（零报错、无跨域、永久免费） -->
+        <script src="https://giscus.app/client.js"
+                data-repo="你的GitHub用户名/你的仓库名"
+                data-repo-id="你的仓库ID"
+                data-category="Announcements"
+                data-category-id="你的分类ID"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="light"
+                data-lang="zh-CN"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
 </body>
 </html>
