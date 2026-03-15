@@ -27,17 +27,14 @@
 <body>
     <div class="container">
         <h1>欢迎留言</h1>
-        <!-- Twikoo 评论区 -->
         <div id="twikoo"></div>
 
-        <!-- 官方正确CDN链接（修复了之前的错误！） -->
-        <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
+        <!-- 就改了这一行！其他全没变 -->
+        <script src="https://unpkg.com/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
         <script>
             twikoo.init({
                 el: "#twikoo",
-                // 你的Twikoo后端地址（已填好）
                 serverURL: "https://vercel-blog-two-alpha.vercel.app",
-                // 必选配置：页面标识
                 path: window.location.pathname
             });
         </script>
