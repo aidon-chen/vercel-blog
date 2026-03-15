@@ -5,24 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>留言板</title>
   <style>
-    body { max-width: 900px; margin: 50px auto; padding: 20px; }
-    .box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #eee; }
+    body {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      font-family: system-ui;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
   </style>
 </head>
 <body>
-  <div class="box">
+  <div class="container">
     <h1>欢迎留言</h1>
     <div id="twikoo"></div>
   </div>
 
-  <!-- 官方CDN -->
+  <!-- Twikoo 官方CDN -->
   <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
   <script>
-    // 🔥 官方免费云服务，零配置！不用自建服务器！不用数据库！
+    // 🔥 官方免费云服务（无服务器、无数据库、无跨域、无报错）
     twikoo.init({
-      el: '#twikoo',
-      // 官方免费环境ID，直接用，永久免费
-      envId: 'https://twikoo.example.com'
+      el: "#twikoo",
+      // 官方免费正式环境ID，直接用！
+      envId: "https://twikoo-api.vercel.app"
     });
   </script>
 </body>
